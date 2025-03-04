@@ -67,7 +67,7 @@ header {
 }
 
 nav {
-  > ul {
+  & > ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -75,7 +75,7 @@ nav {
     width: 979.99px;
     height: 43.99px;
 
-    > li {
+    & > li {
       padding: 0 8px;
       font-weight: 400;
 
@@ -83,6 +83,10 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      & .link {
+        height: fit-content;
+      }
     }
   }
 }
@@ -101,22 +105,21 @@ nav {
   height: fit-content;
 
   padding: 64px 22px 84px;
-  margin: -1rem auto;
+  margin: auto;
 
   transform: translateY(-100px);
   transition: transform 300ms ease-out, opacity 150ms ease-in-out;
 
-  pointer-events: none;
   z-index: -1;
   background: var(--pure-white);
 
   & > div {
     display: flex;
-    align-items: first baseline;
+    align-items: start;
     justify-content: flex-start;
-    > div {
-      ul {
-        li {
+    & > div {
+      & ul {
+        & li {
           padding: 9px 11px 7px;
           margin: 0 -11px;
         }
@@ -126,6 +129,12 @@ nav {
       padding: 0 88px 0 0;
       font-size: 24px;
       font-weight: 500;
+
+      ul {
+        .small {
+          font-size: 14px;
+        }
+      }
     }
     & > .smaller {
       padding: 0 44px 0 0;
@@ -147,11 +156,13 @@ nav {
 }
 
 .dropdown {
-  & > .link:hover {
-    & + .dropdown-menu {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: all;
+  & .link {
+    &:hover {
+      & + .dropdown-menu {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+      }
     }
   }
 }
