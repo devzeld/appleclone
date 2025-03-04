@@ -112,7 +112,7 @@ nav {
 
   & > div {
     display: flex;
-    align-items: center;
+    align-items: first baseline;
     justify-content: flex-start;
     > div {
       ul {
