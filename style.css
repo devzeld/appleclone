@@ -100,12 +100,13 @@ nav {
   top: calc(100% - 0.5rem);
 
   opacity: 0;
+  visibility: hidden;
 
   width: 100vw;
   height: fit-content;
 
   padding: 64px 22px 84px;
-  margin: auto;
+  margin: -1rem 0 0 0;
 
   transform: translateY(-100px);
   transition: transform 300ms ease-out, opacity 150ms ease-in-out;
@@ -122,6 +123,7 @@ nav {
         & li {
           padding: 9px 11px 7px;
           margin: 0 -11px;
+          clear: both;
         }
       }
     }
@@ -156,14 +158,20 @@ nav {
 }
 
 .dropdown {
-  & .link {
-    &:hover {
-      & + .dropdown-menu {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: all;
-      }
+  height: 43.99px;
+  &:hover {
+    & .dropdown-menu {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
     }
+  }
+  & > .dropdown-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: all;
   }
 }
 
