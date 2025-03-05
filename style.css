@@ -3,7 +3,8 @@
   --pure-white: #fff;
   --pure-black: #000;
 
-  --hero-grey: #f5f5f7;
+  --hero-gradient: linear-gradient(180deg, #addcee 0%, #fff 100%);
+  --button-blue: #0077ed;
 
   --linear-right-font-color: linear-gradient(
     90deg,
@@ -175,14 +176,6 @@ nav {
   }
 }
 
-main {
-  section {
-    background-color: #bde0fe;
-    height: 100vh;
-    width: 100%;
-  }
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -198,5 +191,100 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+
+main{
+  & section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    background: var(--hero-gradient);
+    height: 100vh;
+    width: 100%;
+
+    & div{
+      &.text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        & h1{
+          font-size: 24px;
+          font-weight: 400;
+        }
+
+        & h2{
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+
+      &.buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      
+        width: fit-content;
+        height: fit-content;
+      
+        & a{  
+          font-size: 17px;
+          padding: 11px 21px;
+          border-radius: 100px;
+          
+          &.filled{
+            background: var(--button-blue);
+            color: var(--pure-white);
+          }
+      
+          &.empty {
+            background: transparent;
+            color: var(--button-blue);
+            border: 1px solid var(--button-blue);
+      
+            margin: 0 0 0 13px;
+      
+            &:hover{
+              color: var(--pure-white);
+              background: var(--button-blue);
+            }
+          }
+        }
+      }
+
+      &.info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+
+        & h2{
+          background: var(--linear-right-font-color);
+          color: transparent;
+          background-clip: text;
+
+          font-size: 20px;
+          font-weight: 500;
+
+          margin: 0 0 16px;
+        }
+
+        & h3{
+          font-size: 15px;
+          font-weight: 400;
+
+          color: var(--pure-black);
+
+          margin: 0 0 16px;
+        }
+      }
+    }
   }
 }
