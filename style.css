@@ -1,11 +1,15 @@
 :root {
   --pure-white: #fff;
   --pure-black: #000;
+
   --body-grey: #fff;
-  --hero-gradient: linear-gradient(180deg, #addcee 0%, #ececec 100%);
-  --hero-gradient-reverse: linear-gradient(180deg, #ececec 0%, #addcee 100%);
+
+  --hero-gradient: #fafafa;
+  --hero-gradient-ipad: linear-gradient(180deg, #addcee 0%, #ececec 100%);
+
   --button-blue: #0077ed;
   --button-blue-hover: rgb(32, 140, 255);
+
   --linear-right-font-color: linear-gradient(
     90deg,
     rgba(0, 111, 246, 1) 0%,
@@ -174,12 +178,16 @@ main section {
   justify-content: center;
   flex-direction: column;
   background: var(--hero-gradient);
-  height: 100vh;
+
+  margin: 36px 0 0 0;
+
+  height: 90vh;
   width: 100%;
 }
 
-main section.reverse {
-  background: var(--hero-gradient-reverse);
+main section.ipad {
+  margin: 0;
+  background: var(--hero-gradient-ipad);
 }
 
 main section div.text {
@@ -187,10 +195,23 @@ main section div.text {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
+  text-align: center;
+}
+
+main section div.text a {
+  margin-top: -36px;
+  font-size: 52px;
+  font-weight: 600;
+}
+
+main section div.text img {
+  font-size: 52px;
+  font-weight: 600;
 }
 
 main section div.text h1 {
-  margin-top: 15px;
+  margin-top: 8px;
   font-size: 24px;
   font-weight: 400;
 }
@@ -258,4 +279,15 @@ main section div.info h3 {
   font-weight: 400;
   color: var(--pure-black);
   margin-top: 8px;
+}
+
+div.mac{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.mac img{
+  padding: 40px 0;
+  width: 40%;
 }
