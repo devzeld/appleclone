@@ -177,6 +177,7 @@ main section {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
   background: var(--hero-gradient);
 
   margin: 36px 0 0 0;
@@ -226,8 +227,10 @@ main section div.buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: fit-content;
   height: fit-content;
+
   margin-top: 19px;
 }
 
