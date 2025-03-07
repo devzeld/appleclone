@@ -1,296 +1,251 @@
 :root {
-  --pure-white: #fff;
-  --pure-black: #000;
-
-  --body-grey: #fff;
-
-  --hero-gradient: #fafafa;
-  --hero-gradient-ipad: linear-gradient(180deg, #addcee 0%, #ececec 100%);
-
-  --button-blue: #0077ed;
-  --button-blue-hover: rgb(32, 140, 255);
-
-  --linear-right-font-color: linear-gradient(
-    90deg,
-    rgba(0, 111, 246, 1) 0%,
-    rgba(191, 69, 224, 1) 30%,
-    rgba(245, 57, 0, 1) 100%
-  );
+--pure-white: #fff;
+--pure-black: #000;
+--body-grey: #fff;
+--hero-gradient: #fafafa;
+--hero-gradient-ipad: linear-gradient(180deg, #addcee 0%, #ececec 100%);
+--button-blue: #0077ed;
+--button-blue-hover: rgb(32, 140, 255);
+--linear-right-font-color: linear-gradient(
+90deg,
+rgba(0, 111, 246, 1) 0%,
+rgba(191, 69, 224, 1) 30%,
+rgba(245, 57, 0, 1) 100%
+);
 }
-
 body, html {
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background: var(--body-grey);
+font-size: 14px;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue",
+Arial, sans-serif;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background: var(--body-grey);
 }
 
 *, *::before, *::after {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
-
 h1, h2, h3, h4, h5, h6, p, ol, ul {
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+white-space: nowrap;
+overflow: hidden;
+margin: 0;
+padding: 0;
 }
-
 ol, ul {
-  list-style-type: none;
+list-style-type: none;
 }
-
 img {
-  height: auto;
+height: auto;
 }
-
 a {
-  text-decoration: none;
-  color: var(--pure-black);
+text-decoration: none;
+color: var(--pure-black);
 }
-
 header {
-  background: var(--pure-white);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
+background: var(--pure-white);
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+position: fixed;
 }
-
 nav > ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 980px;
-  height: 44px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 980px;
+height: 44px;
 }
-
 nav > ul > li {
-  padding: 0 8px;
-  font-weight: 400;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+padding: 0 8px;
+font-weight: 400;
+height: 44px;
+display: flex;
+align-items: center;
 
+justify-content: center;
+}
 nav > ul > li {
-  height: fit-content;
+height: fit-content;
 }
-
 .dropdown-menu {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  left: 0;
-  top: calc(100% - 0.5rem);
-  opacity: 0;
-  visibility: hidden;
-  width: 100vw;
-  height: fit-content;
-  padding: 64px 22px 84px;
-  margin-top: -1rem;
-  transform: translateY(-100px);
-  transition: transform 300ms ease-out, opacity 150ms ease-in-out;
-  z-index: -1;
-  background: var(--pure-white);
+display: flex;
+justify-content: center;
+position: absolute;
+left: 0;
+top: calc(100% - 0.5rem);
+opacity: 0;
+visibility: hidden;
+width: 100vw;
+height: fit-content;
+padding: 64px 22px 84px;
+margin-top: -1rem;
+transform: translateY(-100px);
+transition: transform 300ms ease-out, opacity 150ms ease-in-out;
+z-index: -1;
+background: var(--pure-white);
 }
-
 .dropdown-menu > div {
-  display: flex;
-  align-items: start;
-  justify-content: flex-start;
+display: flex;
+align-items: start;
+justify-content: flex-start;
 }
-
 .dropdown-menu > div > div ul li {
-  padding: 9px 11px 7px;
-  margin: 0 -11px;
-  clear: both;
+padding: 9px 11px 7px;
+margin: 0 -11px;
+clear: both;
 }
-
 .dropdown-menu > div .bigger {
-  padding-right: 88px;
-  font-size: 24px;
-  font-weight: 500;
+padding-right: 88px;
+font-size: 24px;
+font-weight: 500;
 }
-
 .dropdown-menu > div .bigger ul .small {
-  font-size: 14px;
+font-size: 14px;
 }
-
 .dropdown-menu > div .smaller {
-  padding-right: 44px;
-  font-size: 12px;
-  font-weight: 500;
-}
 
+padding-right: 44px;
+font-size: 12px;
+font-weight: 500;
+}
 .dropdown-menu > div .smaller ul li {
-  padding: 7px 11px;
+padding: 7px 11px;
 }
-
 .dropdown-menu h2 {
-  font-size: 12px;
-  font-weight: 100;
+font-size: 12px;
+font-weight: 100;
 }
-
 .dropdown {
-  height: 44px;
+height: 44px;
 }
-
 .dropdown:hover .dropdown-menu,
 .dropdown > .dropdown-menu:hover {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all;
+visibility: visible;
+opacity: 1;
+transform: translateY(0);
+pointer-events: all;
 }
-
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 }
-
 .logo img {
-  transform: scale(0.6);
+transform: scale(0.6);
 }
-
 * svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 }
-
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 16px;
-}
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+gap: 16px;
 
+}
 main section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  
-  background: var(--hero-gradient);
-
-  margin: 48px 0 0 0;
-
-  height: 90vh;
-  width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background: var(--hero-gradient);
+margin: 36px 0 0 0;
+height: 90vh;
+width: 100%;
 }
-
 main section.ipad {
-  margin: 0;
-  background: var(--hero-gradient-ipad);
+margin: 0;
+background: var(--hero-gradient-ipad);
 }
-
 main section div.text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  
-  text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+text-align: center;
 }
-
 main section div.text a {
-  margin-top: -36px;
-  font-size: 52px;
-  font-weight: 600;
+margin-top: -36px;
+font-size: 52px;
+font-weight: 600;
 }
-
 main section div.text img {
-  font-size: 52px;
-  font-weight: 600;
+font-size: 52px;
+font-weight: 600;
 }
-
 main section div.text h1 {
-  margin-top: 8px;
-  font-size: 24px;
-  font-weight: 400;
+margin-top: 8px;
+font-size: 24px;
+font-weight: 400;
 }
-
 main section div.text h2 {
-  margin-top: 8px;
-  font-size: 20px;
-  font-weight: 300;
-}
+margin-top: 8px;
 
+font-size: 20px;
+font-weight: 300;
+}
 main section div.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: fit-content;
-  height: fit-content;
-
-  margin-top: 19px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: fit-content;
+height: fit-content;
+margin-top: 19px;
 }
-
 main section div.buttons a {
-  font-size: 17px;
-  padding: 11px 21px;
-  border-radius: 100px;
+font-size: 17px;
+padding: 11px 21px;
+border-radius: 100px;
 }
-
 main section div.buttons a.filled {
-  background: var(--button-blue);
-  color: var(--pure-white);
+background: var(--button-blue);
+color: var(--pure-white);
 }
-
 main section div.buttons a.filled:hover {
-  background: var(--button-blue-hover);
+background: var(--button-blue-hover);
 }
-
 main section div.buttons a.empty {
-  background: transparent;
-  color: var(--button-blue);
-  border: 1px solid var(--button-blue);
-  margin-left: 13px;
+background: transparent;
+color: var(--button-blue);
+border: 1px solid var(--button-blue);
+margin-left: 13px;
 }
-
 main section div.buttons a.empty:hover {
-  color: var(--pure-white);
-  background: var(--button-blue);
+color: var(--pure-white);
+background: var(--button-blue);
 }
-
 main section div.info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 }
-
 main section div.info h2 {
-  background: var(--linear-right-font-color);
-  color: transparent;
-  background-clip: text;
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 6px;
-}
 
+background: var(--linear-right-font-color);
+color: transparent;
+background-clip: text;
+font-size: 20px;
+font-weight: 500;
+margin-top: 6px;
+}
 main section div.info h3 {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--pure-black);
-  margin-top: 8px;
+font-size: 15px;
+font-weight: 400;
+color: var(--pure-black);
+margin-top: 8px;
 }
-
 div.mac{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 }
-
 div.mac img{
-  padding: 40px 0;
-  width: 40%;
+padding: 40px 0;
+width: 40%;
 }
